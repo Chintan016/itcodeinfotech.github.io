@@ -1,0 +1,46 @@
+.card .skeleton-loader {
+    z-index: 1;
+    position: absolute;
+    left: 0;
+    top: 0;
+    content: "";
+    border-radius: inherit;
+    width: 100%;
+    height: 100%;
+    border: 1px solid #f3f3f3;
+    background-image: -webkit-gradient(
+        linear,
+        left top,
+        right top,
+        color-stop(8%, #e8e8e8),
+        color-stop(18%, #e4e4e4),
+        color-stop(33%, #e8e8e8)
+    );
+    background-image: linear-gradient(90deg, #e8e8e8 8%, #e4e4e4 18%, #e8e8e8 33%);
+    -webkit-animation: skeletonAnimation 4s linear infinite forwards;
+    animation: skeletonAnimation 4s linear infinite forwards;
+}
+@-webkit-keyframes skeletonAnimation {
+    0% {
+        -webkit-transform: translateZ(0);
+        transform: translateZ(0);
+        background-position: -468px 0;
+    }
+    to {
+        -webkit-transform: translateZ(0);
+        transform: translateZ(0);
+        background-position: 468px 0;
+    }
+}
+@keyframes skeletonAnimation {
+    0% {
+        -webkit-transform: translateZ(0);
+        transform: translateZ(0);
+        background-position: -468px 0;
+    }
+    to {
+        -webkit-transform: translateZ(0);
+        transform: translateZ(0);
+        background-position: 468px 0;
+    }
+}
